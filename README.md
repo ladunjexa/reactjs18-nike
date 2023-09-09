@@ -225,7 +225,7 @@ If you are developing a production application, we recommend updating the config
 
 ## :camera: Screenshots
 
-![Mockup](.github/assets/nike-landing-page.png)
+![Mockup](.github/assets/nike-landing-page-mockup.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
