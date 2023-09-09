@@ -3,6 +3,8 @@ import { hamburger } from "../assets/icons";
 
 import { navLinks } from "../constants";
 
+import type { INavLink } from "../types";
+
 const Nav = () => {
   return (
     <header className="padding-x py-8 absolute z-10 w-full">
@@ -11,7 +13,7 @@ const Nav = () => {
           <img src={headerLogo} alt="Logo" width={130} height={29} />
         </a>
         <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
-          {navLinks.map((item: { label: string; href: string }) => (
+          {navLinks.map((item: INavLink) => (
             <li key={item.label}>
               <a
                 href={item.href}

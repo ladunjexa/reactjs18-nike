@@ -1,3 +1,14 @@
+import type {
+  INavLink,
+  IFooterSection,
+  IProduct,
+  IReview,
+  IService,
+  IShoe,
+  ISocialMedia,
+  IStatistic,
+} from "../types";
+
 import {
   facebook,
   instagram,
@@ -6,6 +17,7 @@ import {
   truckFast,
   twitter,
 } from "../assets/icons";
+
 import {
   bigShoe1,
   bigShoe2,
@@ -21,14 +33,14 @@ import {
   thumbnailShoe3,
 } from "../assets/images";
 
-export const navLinks: { href: string; label: string }[] = [
+export const navLinks: INavLink[] = [
   { href: "#home", label: "Home" },
   { href: "#about-us", label: "About Us" },
   { href: "#products", label: "Products" },
   { href: "#contact-us", label: "Contact Us" },
 ];
 
-export const shoes: { thumbnail: string; bigShoe: string }[] = [
+export const shoes: IShoe[] = [
   {
     thumbnail: thumbnailShoe1,
     bigShoe: bigShoe1,
@@ -43,18 +55,13 @@ export const shoes: { thumbnail: string; bigShoe: string }[] = [
   },
 ];
 
-export const statistics: { value: string; label: string }[] = [
+export const statistics: IStatistic[] = [
   { value: "1k+", label: "Brands" },
   { value: "500+", label: "Shops" },
   { value: "250k+", label: "Customers" },
 ];
 
-export const products: {
-  imgUrl: string;
-  name: string;
-  price: string;
-  rating: number;
-}[] = [
+export const products: IProduct[] = [
   {
     imgUrl: shoe4,
     name: "Nike Air Jordan-01",
@@ -81,11 +88,7 @@ export const products: {
   },
 ];
 
-export const services: {
-  imgUrl: string;
-  label: string;
-  subtext: string;
-}[] = [
+export const services: IService[] = [
   {
     imgUrl: truckFast,
     label: "Free shipping",
@@ -104,12 +107,7 @@ export const services: {
   },
 ];
 
-export const reviews: {
-  imgUrl: string;
-  customerName: string;
-  rating: number;
-  feedback: string;
-}[] = [
+export const reviews: IReview[] = [
   {
     imgUrl: customer1,
     customerName: "Morich Brown",
@@ -126,10 +124,7 @@ export const reviews: {
   },
 ];
 
-export const footerLinks: {
-  title: string;
-  links: { name: string; link: string }[];
-}[] = [
+export const footerLinks: IFooterSection[] = [
   {
     title: "Products",
     links: [
@@ -160,7 +155,7 @@ export const footerLinks: {
   },
 ];
 
-export const socialMedia: { src: string; alt: string }[] = [
+export const socialMedia: ISocialMedia[] = [
   { src: facebook, alt: "facebook logo" },
   { src: twitter, alt: "twitter logo" },
   { src: instagram, alt: "instagram logo" },

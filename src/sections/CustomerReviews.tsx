@@ -2,6 +2,8 @@ import ReviewCard from "../components/ReviewCard";
 
 import { reviews } from "../constants";
 
+import type { IReview } from "../types";
+
 const CustomerReviews = () => {
   return (
     <section className="max-container">
@@ -16,7 +18,7 @@ const CustomerReviews = () => {
       </p>
 
       <div className="mt-24 flex flex-1 justify-evenly items-center max-lg:flex-col gap-14">
-        {reviews.map((review) => (
+        {reviews.map((review: IReview) => (
           <ReviewCard 
             key={review.customerName}
             customerName={review.customerName}
