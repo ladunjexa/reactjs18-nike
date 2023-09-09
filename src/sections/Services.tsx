@@ -1,10 +1,14 @@
-import React from 'react'
+import ServiceCard from "../components/ServiceCard";
 
-type Props = {}
+import { services } from "../constants";
 
-const Services = (props: Props) => {
+const Services = () => {
   return (
-    <div>Services</div>
+    <section className="max-container flex justify-center flex-wrap gap-9">
+      {services.map((service) => (
+        <ServiceCard key={service.label} {...service} />
+      ))}
+    </section>
   )
 }
 
