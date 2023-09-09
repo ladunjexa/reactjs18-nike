@@ -11,36 +11,29 @@ import {
 
 import Nav from "./components/Nav";
 
-function App() {
-  return (
-    <main className="relative">
-      <Nav />
-      <section className="xl:padding-l wide:padding-r padding-b">
-        <Hero />
+const sections: {
+  component: JSX.Element;
+  className: string;
+}[] = [
+  { component: <Hero />, className: "xl:padding-l wide:padding-r padding-b" },
+  { component: <PopularProducts />, className: "padding" },
+  { component: <SuperQuality />, className: "padding" },
+  { component: <Services />, className: "padding-x py-10" },
+  { component: <SpecialOffer />, className: "padding" },
+  { component: <CustomerReviews />, className: "bg-pale-blue padding" },
+  { component: <Subscribe />, className: "padding-x sm:py-32 py-16 w-full" },
+  { component: <Footer />, className: "bg-black padding-x padding-t pb-8" },
+];
+
+const App = () => (
+  <main className="relative">
+    <Nav />
+    {sections.map(({ component, className }, index) => (
+      <section key={index} className={className}>
+        {component}
       </section>
-      <section className="padding">
-        <PopularProducts />
-      </section>
-      <section className="padding">
-        <SuperQuality />
-      </section>
-      <section className="padding-x py-10">
-        <Services />
-      </section>
-      <section className="padding">
-        <SpecialOffer />
-      </section>
-      <section className="bg-pale-blue padding">
-        <CustomerReviews />
-      </section>
-      <section className="padding-x sm:py-32 py-16 w-full">
-        <Subscribe />
-      </section>
-      <section className="bg-black padding-x padding-t pb-8">
-        <Footer />
-      </section>
-    </main>
-  );
-}
+    ))}
+  </main>
+);
 
 export default App;
